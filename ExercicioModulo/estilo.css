@@ -1,0 +1,57 @@
+body {
+    background: #f0f4f8;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: #fff;
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #2d6cdf;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+button {
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1a4fa3;
+}
+
+#resultado-imc, #classificacao {
+    margin-top: 18px;
+    font-size: 1.1em;
+    font-weight: bold;
+}

@@ -1,0 +1,452 @@
+/* ==================== RESET E ESTILOS GLOBAIS ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* ==================== CONTAINER E LAYOUT ====================*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-wrapper, .saved-data-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #667eea;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #764ba2;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #667eea;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==================== FIELDSET ====================*/
+
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+legend {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* ==================== FORM ELEMENTS ====================*/
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: #f8f9ff;
+}
+
+input:readonly {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #666;
+}
+
+input:readonly:focus {
+    border-color: #e0e0e0;
+    box-shadow: none;
+    background-color: #f5f5f5;
+}
+
+/* ==================== INPUT GROUP (CEP) ====================*/
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+/* ==================== FORM ROWS ====================*/
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ==================== BUTTONS ====================*/
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-search {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 20px;
+    white-space: nowrap;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-search:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-search:active {
+    transform: translateY(0);
+}
+
+/* ==================== FORM ACTIONS ====================*/
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    flex: 1;
+    background: #e0e0e0;
+    color: #333;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+/* ==================== STATUS MESSAGES ====================*/
+
+.status-message {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+.status-message.loading {
+    color: #1976d2;
+    background-color: #e3f2fd;
+    border-left: 4px solid #1976d2;
+}
+
+.status-message.error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border-left: 4px solid #d32f2f;
+}
+
+.status-message.success {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    border-left: 4px solid #388e3c;
+}
+
+.success-message {
+    display: none;
+    background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(56, 142, 60, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+/* ==================== SAVED DATA SECTION ====================*/
+
+.saved-data-wrapper {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.saved-data {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px dashed #e0e0e0;
+}
+
+.info-text {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+.data-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.data-card h3 {
+    margin-bottom: 20px;
+    color: #667eea;
+}
+
+.data-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.data-section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.data-section strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ==================== ANIMATIONS ====================*/
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== RESPONSIVE DESIGN ====================*/
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-wrapper, .saved-data-wrapper {
+        padding: 30px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-wrapper, .saved-data-wrapper {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    fieldset {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input {
+        flex: auto;
+    }
+
+    .btn-search {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 15px;
+    }
+
+    .form-wrapper, .saved-data-wrapper {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .data-section p {
+        font-size: 13px;
+    }
+}
